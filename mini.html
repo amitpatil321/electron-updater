@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	</head>
+	<h1>This is child window 1</h1>
+	<a href="#" onClick="open_main()">Open window 2</a>
+</html>
+<script type="text/javascript">
+	var {ipcRenderer, remote} = require('electron');
+	function open_main(){
+		ipcRenderer.send('open_main')
+	}
+</script>
